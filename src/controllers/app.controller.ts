@@ -21,4 +21,17 @@ export class AppController {
       return new ResponseData(404, 'Data not found: ' + error.message, null);
     }
   }
+
+  @Get('getCountries')
+  getCountries(): ResponseData {
+    try {
+      return new ResponseData(
+        200,
+        'Data found',
+        this.appService.getCountries(),
+      );
+    } catch (error) {
+      return new ResponseData(404, 'Data not found: ' + error.message, null);
+    }
+  }
 }
