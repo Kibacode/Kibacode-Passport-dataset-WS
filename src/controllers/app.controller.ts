@@ -6,6 +6,19 @@ import { AppService } from '../services/app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get('getCountries')
+  getCountries(): ResponseData {
+    try {
+      return new ResponseData(
+        200,
+        'Data found',
+        this.appService.getCountries(),
+      );
+    } catch (error) {
+      return new ResponseData(404, 'Data not found: ' + error.message, null);
+    }
+  }
+
   @Get('passportinformation/:origin/:destination')
   getPassportInformation(
     @Param('origin') origin: string,
@@ -22,16 +35,5 @@ export class AppController {
     }
   }
 
-  @Get('getCountries')
-  getCountries(): ResponseData {
-    try {
-      return new ResponseData(
-        200,
-        'Data found',
-        this.appService.getCountries(),
-      );
-    } catch (error) {
-      return new ResponseData(404, 'Data not found: ' + error.message, null);
-    }
-  }
+  
 }
