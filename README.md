@@ -1,73 +1,82 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# Test
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Pre-requirements
 
-## Description
+- NodeJS with NPM (stable version)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- VS Code 
 
-## Installation
+- Rest service client (Postman, Insomnia, curl, etc.)
 
-```bash
-$ npm install
-```
+## Technologies used
 
-## Running the app
+- Nest JS
 
-```bash
-# development
-$ npm run start
+- Angular 13 (with Material Design)
 
-# watch mode
-$ npm run start:dev
+  
 
-# production mode
-$ npm run start:prod
-```
+# Steps to deploy apps
 
-## Test
+  
+
+## Prepare your database
+
+  
+
+1. The database is include into Backend project ([Passport-dataset-WS](https://github.com/Kibacode/Passport-dataset-WS)).
+
+  
+
+## Run backend rest-services
+
+1. Clone or download project from [Passport-dataset-WS](https://github.com/Kibacode/Passport-dataset-WS)
+
+2. Run a command line terminal in the generated folder.
+3. Compile project using npm
+- For linux-based or macOS Terminal and Windows CMD or Powershell.
 
 ```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
+npm install
 
-# test coverage
-$ npm run test:cov
 ```
 
-## Support
+4. Run the services using npm
+- For linux-based or macOS Terminal and Windows CMD or Powershell.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
 
-## Stay in touch
+npm start
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```
 
-## License
+4. The web services will be deployed in port 3000.
 
-Nest is [MIT licensed](LICENSE).
+5. To test the service is working was configured an OpenApi instance, you can see it in http://localhost:3000/api.
+
+## Run front-end app
+
+1. Clone or download project from [Passport-checker](https://github.com/Kibacode/Passport-checker)
+
+2. Run a command line terminal in the generated folder.
+3. Compile project using npm.
+- For linux-based or macOS Terminal and Windows CMD or Powershell.
+
+```bash
+
+npm install
+
+```
+
+4. Run the services using npm
+- For linux-based or macOS Terminal and Windows CMD or Powershell.
+
+```bash
+
+npm start
+
+```
+
+4. The web app will be running in http://localhost:4200/.
